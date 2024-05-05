@@ -1,0 +1,10 @@
+/* Apply Montserrat font to all elements */
+body,
+h1,
+p {
+  font-family: "Montserrat", sans-serif;
+}
+.myChart {
+  width: 95%;
+  height: 95%;
+}
