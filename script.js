@@ -21,17 +21,16 @@ function processData() {
     // Call the function with the CSV data
     //const { names, percentages } = parseCSV(csv_);
 
-    const colors_array = Array(names.length).fill("#3BC4A0");
+    const colors_array = Array(names.length).fill("#6db0ff");
 
-    colors_array[names.findIndex((name) => name.includes("ESCUELA"))] =
-      "#FABADA";
-    colors_array[names.findIndex((name) => name.includes("FCSJ"))] = "#666666";
-    colors_array[names.findIndex((name) => name.includes("FHCD"))] = "#666666";
+    colors_array[names.findIndex((name) => name.includes("ESCUELA"))] = "#3bc4a0";
+    colors_array[names.findIndex((name) => name.includes("FCSJ"))] = "#ffbf1f";
+    colors_array[names.findIndex((name) => name.includes("FHCD"))] = "#5500dd";
 
     // Customize colors
-    colors_array[0] = "#FFD700";
-    colors_array[1] = "#C0C0C0";
-    colors_array[2] = "#CD7F32";
+    colors_array[0] = "#ffc514";
+    colors_array[1] = "#d2cdcd";
+    colors_array[2] = "#d6772e";
 
     Chart.defaults.font.family = "Montserrat";
 
@@ -64,22 +63,29 @@ function processData() {
             labels: {
               font: {
                 family: "Montserrat",
-                weight: "bold",
               },
               color: "black", // Set the color of legend labels here
             },
           },
 
           title: {
-            display: false,
+            display: true,
             text: "Índice de participación por grado",
             font: {
               family: "Montserrat",
               weight: "bold",
               size: 20,
             },
+            color: "black",
           },
         },
+       	scales: {
+        	y: {
+        		grid: {
+        			display: false
+        		}
+        	}
+       },
       },
     });
   });

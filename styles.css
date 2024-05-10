@@ -1,4 +1,9 @@
 /* Apply Montserrat font to all elements */
+* {
+	overflow-x: hidden;
+	border: none;
+}
+
 body,
 h1,
 p {
@@ -7,4 +12,25 @@ p {
 .myChart {
   width: 95%;
   height: 95%;
+}
+
+header {
+	text-align: center;
+	background-color: #3bc4a0;
+	color: white;
+	width: 100vw;
+	height: 10vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-bottom: 1.5vh;
+}
+
+header a {
+	color: #FF6D2E;
+	text-decoration: none;
+}
+
+#graph {
+	margin-top: 12vh;
 }
