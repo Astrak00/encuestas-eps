@@ -21,11 +21,11 @@ function processData() {
     // Call the function with the CSV data
     //const { names, percentages } = parseCSV(csv_);
 
-    const colors_array = Array(names.length).fill("#6db0ff");
+    const colors_array = Array(names.length).fill("#404040");
 
-    colors_array[names.findIndex((name) => name.includes("ESCUELA"))] = "#3bc4a0";
-    colors_array[names.findIndex((name) => name.includes("FCSJ"))] = "#ffbf1f";
-    colors_array[names.findIndex((name) => name.includes("FHCD"))] = "#5500dd";
+    colors_array[names.findIndex((name) => name.includes("ESCUELA"))] = "#3BC4A0";
+    colors_array[names.findIndex((name) => name.includes("FCSJ"))] = "#FFBF1F";
+    colors_array[names.findIndex((name) => name.includes("FHCD"))] = "#5599DD";
 
     // Customize colors
     colors_array[0] = "#ffc514";
@@ -59,6 +59,7 @@ function processData() {
         responsive: true,
         plugins: {
           legend: {
+            display: false,
             position: "right",
             labels: {
               font: {
